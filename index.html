@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metcare-Hospital</title>
   <link rel="stylesheet" href="stylesheet.css">
-  <link rel="icon" href="./images/land_medcare-removebg-preview - Copy.png">
+  <link rel="icon" href="./images/land_medcare-removebg-preview.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -28,7 +28,7 @@
             <li class="nav-item"><a class="nav-link" href="#expert"id="navbarColor03" style="color: #0182d6;"><i class="fa-solid fa-user-doctor"></i> Doctors</a></li> 
             <!--dropdown-->   
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="navbarColor03" style="color: #0182d6;"><i class="fa-solid fa-building-user"></i> Department</a>
+              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false" id="navbarColor03" style="color: #0182d6;"><i class="fa-solid fa-building-user"></i> Departments</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="https://medcarehospitals.in/departments.html">Cordiology</a></li>
                 <li><a class="dropdown-item" href="#">Orthopedics</a></li>
@@ -38,9 +38,9 @@
                 <li><a class="dropdown-item" href="#">Critical Care</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="https://medcarehospitals.in/contact-us.html"id="navbarColor03" style="color:#0182d6;"><i class="bi bi-person-lines-fill"></i> Contact</a></li>
-            <a href="#make an appoinment"><button class="btn btn mx-5" type="button"  style="color:white;background-color:#00bcd4">make an appoinment</button></a> 
-            <li><a href="#footer"  style="color:#00bcd4;text-decoration: none;margin-bottom: 50px;"><i class="bi bi-telephone"> call us <br> 8001234560</i></a></li>       
+            <li class="nav-item"><a class="nav-link" href="https://medcarehospitals.in/contact-us.html"id="navbarColor03" style="color:#0182d6;"><i class="bi bi-person-lines-fill"></i> Contact Us</a></li>
+            <a href="#"><button class="btn btn mx-2" type="button"  style="color:white;background-color:#00bcd4"  data-bs-toggle="modal" data-bs-target="#exampleModal">Make An Appoinment</button></a> 
+            <li><a href="#footer"  style="color:#00bcd4;text-decoration: none;margin-bottom: 50px;"><i class="bi bi-telephone"> Call Us <br> 9207741853</i></a></li>       
           </ul>
         </div>
       </div>
@@ -285,7 +285,7 @@ Physical Rehabilitation
         <div class="section-lg text-center text-lg-left ">
           <h2 class="wow fadeInRight mx-4">High-class <span class="text-primary">specialists</span> are ready to help you at any time.</h2>
           <p class="text-dark text-md wow fadeInRight" data-wow-dalay=".2s" style="visibility: visible; animation-name: fadeInRight; margin-left: 70px;">Contact us any suitable way and make an appointment with the doctor whose help you need! Visit us at the scheduled time and get your treatment.</p>
-          <a class="wow fadeInRight btn btn-primary button button-md" href="index.html" data-wow-dalay=".2s" style="visibility: visible; animation-name: fadeInRight; background-color: #00bcd4;">Make an appointment</a>
+          <a class="wow fadeInRight btn btn-primary button button-md"  data-wow-dalay=".2s" style="visibility: visible; animation-name: fadeInRight; background-color: #00bcd4;">Make an appointment</a>
         </div>
       </div>
     </div>
@@ -300,12 +300,12 @@ Physical Rehabilitation
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Your Name">
+            <input type="text" class="form-control" placeholder="Your Name" required>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group mb-4">
-            <input type="text" class="form-control" placeholder="Phone number">
+            <input type="text" class="form-control" placeholder="Phone number"required pattern={1-10} required>
           </div>
         </div>
         <div class="col-md-6">
@@ -357,12 +357,13 @@ Physical Rehabilitation
         </div>
         <div class="col-md-6 my-3">
           <div class="form-group">
-            <input type="submit" value="Send message" class="btn btn py-2 px-5 mt-5" style="background-color:darkblue;color: white;">
+            <input type="submit" value="Send message" class="btn btn py-2 px-5 mt-5" style="background-color:darkblue;color: white;" >
           </div>
         </div>
       </div>
     </form>
   </div>
+  
   <!--another part-->
   <div class="col-md-4 text-center p-4" style="background-color: lightgray;">
     <div class="desc border-bottom pb-4">
@@ -382,7 +383,7 @@ Physical Rehabilitation
     </div>
     <div class="desc pt-4 ">
       <h4 class="heading" style="color:#01d28e;">For Emergency Cases</h4>
-      <span class="phone"><strong>(+01) 123 456 7890</strong></span>
+      <span class="phone"><strong>(+91) 920 774 1853</strong></span>
     </div>
   </div>
 </div>
@@ -395,11 +396,11 @@ Physical Rehabilitation
       <div class="col-md mt-5">
         <div class="ftco-footer-widget mb-4">
           <h2 class="ftco-heading-2"> <span style="color: blue;">MED </span><span style="color:orange;">CARE</span></h2>
-          <p class="mt-5">Far far away, behind the word mountains, far from the countries.</p>
+          <p class="mt-5">Far away, behind the word mountains, far from the countries.</p>
           <ul class="ftco-footer-social list-unstyled mt-5 d-inline-flex">
-            <li style="color: cornflowerblue;"  class="footer-icon"><i class="bi bi-twitter px-3"></i></li>
-            <li style="color:blue;"  class="footer-icon"><i class="bi bi-facebook px-3"></i></li>
-            <li style="color:#681da8;"  class="footer-icon"><i class="bi bi-instagram px-3"></i></li>
+            <li style="color: lightgrey;"  class="footer-icon"><i class="bi bi-twitter px-3"></i></li>
+            <li style="color:lightgrey;"  class="footer-icon"><i class="bi bi-facebook px-3"></i></li>
+            <li style="color:lightgrey;"  class="footer-icon"><i class="bi bi-whatsapp"></i></li>
           </ul>
         </div>
       </div>
@@ -443,12 +444,12 @@ Physical Rehabilitation
       </div>
       <div class="col-md mt-5">
         <div class="ftco-footer-widget mb-4">
-          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <h2 class="ftco-heading-2">Contact Us Location ?</h2>
           <div class="block-23 mb-3">
             <ul class="list-unstyled my-3">
-              <li><i class="bi bi-geo-alt text-white"></i> 203 Fake St. Mountain View, San Francisco, California, USA</li>
-              <li><i class="bi bi-telephone text-white"></i> +2 392 3929 210</li>
-              <li><i class="bi bi-envelope text-white"></i> info@gmail.com</li>
+              <li><i class="bi bi-geo-alt text-white"></i> Neendapara road, Neriamangalam Kerala-686693</li>
+              <li><i class="bi bi-telephone text-white"></i> +91 9207741853</li>
+              <li><i class="bi bi-envelope text-white"></i> info@medcare.in</li>
             </ul>
           </div>
         </div>
@@ -468,3 +469,36 @@ Physical Rehabilitation
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
+
+<!--33333333 FORM SECTION SENT MESSAGE BUTTON CLOCK OPEN FORM VALIDATION  333333333-->
+
+<!-- Modal -->
+<div class="modal" tabindex="-1" id="exampleModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:rgb(77, 77, 202);">Contact Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <label for="username">UserName:</label><br>
+          <input type="text" id="username" name="username" pattern="[A-Za-z]{8,}" required><br><br>
+
+          <label for="num">Phone Number:</label><br>
+          <input type="number" id="num" name="num"required><br><br>
+
+          <label for="password">E-mail:</label><br>
+          <input type="email" id="" name="email" required><br><br>
+          <div>
+            <button type="submit" class="btn btn-success" style="justify-content: center; display: flex; text-align: center;">Sent Message</button>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <p>@2024 MEDCARE HOSPITAL. All Rights Reserved. <a href="">Sign up</a></p>
+      </div>
+    </div>
+  </div>
+</div>
