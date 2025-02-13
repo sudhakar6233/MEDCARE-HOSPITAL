@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metcare-Hospital</title>
+    <link rel="icon" href="./images/land_medcare-removebg-preview.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        .service, .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .cart {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            padding: 5px 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .remove-button {
+            background: #dc3545;
+        }
+        .remove-button:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hospital Services</h1>
+    <div id="services-list"></div>
+    
+    <h2>Your Cart</h2>
+    <div class="cart" id="cart"></div>
+    
+    <script>
+        const services = [
+            { id: 1, name: "General Consultation", price: 200 },
+            { id: 2, name: "X-Ray", price: 500 },
+            { id: 3, name: "Blood Test", price: 300 },
+            { id: 4, name: "MRI Scan", price: 2000 }
+        ];
+
+        let cart = [];
+
+        function displayServices() {
+            const serviceList = document.getElementById("services-list");
+            serviceList.innerHTML = "";
+            services.forEach(service => {
+                serviceList.innerHTML += `<div class="service">
+                    <span>${service.name} - $${service.price}</span>
+                    <button onclick="addToCart(${service.id})">Add to Cart</button>
+                </div>`;
+            });
+        }
+
+        function addToCart(serviceId) {
+            const service = services.find(s => s.id === serviceId);
+            if (service) {
+                cart.push(service);
+                displayCart();
+            }
+        }
+
+        function removeFromCart(serviceId) {
+            cart = cart.filter(service => service.id !== serviceId);
+            displayCart();
+        }
+
+        function displayCart() {
+            const cartDiv = document.getElementById("cart");
+            cartDiv.innerHTML = "";
+            let total = 0;
+            if (cart.length === 0) {
+                cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+            cart.forEach(service => {
+                cartDiv.innerHTML += `<div class="cart-item">
+                    <span>${service.name} - $${service.price}</span>
+                    <button class="remove-button" onclick="removeFromCart(${service.id})">Remove</button>
+                </div>`;
+                total += service.price;
+            });
+            cartDiv.innerHTML += `<h3>Total: $${total}</h3>`;
+        }
+
+        displayServices();
+    </script>
+</body>
+</html>
