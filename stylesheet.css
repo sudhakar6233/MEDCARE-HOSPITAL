@@ -164,7 +164,7 @@
   }
 }
 }
-/* about area content  */
+/* ABOUT AREA CONTENT  */
 .clinic-section {
   background-color: #f0faff;
   padding: 40px 20px;
@@ -234,7 +234,7 @@
       font-size: 12px;
   }
 }
-/* accordion section */
+/* ACCORDION SECTION*/
 @media (max-width: 576px) {
   h2 {
     font-size: 1.5rem;
@@ -248,7 +248,7 @@
     font-size: 0.95rem;
   }
 }
-/* future section  */
+/* FUTURE SECTION */
 #cardtheme {
   border: 1px solid #ddd;
   padding: 15px;
@@ -295,8 +295,7 @@
     font-size: 14px;
   }
 }
-/* emergency hotline section  */
-/* Background image and overlay */
+/* EMERGENCY HOTLINE SECTION  */
 .hotline-bg {
   background: url('./images/bg1.jpg') no-repeat center center/cover;
   padding: 50px 0;
@@ -364,10 +363,10 @@
 
   #button-style {
     display: block;
-    width: 80%; /* Makes it responsive */
-    font-size: 0.9rem; /* Slightly larger for readability */
+    width: 80%; 
+    font-size: 0.9rem; 
     padding: 10px 15px;
-    margin: 15px auto; /* Centered with spacing */
+    margin: 15px auto; 
     background-color: #000066;
     color: white;
     border: none;
@@ -471,3 +470,4 @@
     font-size: 0.9rem;
   }
 }
+/* END FOOTER SECTION */
