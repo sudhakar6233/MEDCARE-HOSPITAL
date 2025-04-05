@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Fee Structure</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 40px;
+            text-align: center;
+        }
+        h2, h3 {
+            color: #007bff;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .fee-item, .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #e9ecef;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+            transition: 0.3s;
+        }
+        .fee-item:hover, .cart-item:hover {
+            background: #dee2e6;
+        }
+        button {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .remove-btn {
+            background: #dc3545;
+        }
+        .remove-btn:hover {
+            background: #c82333;
+        }
+        .cart {
+            border-top: 2px solid #007bff;
+            padding-top: 10px;
+        }
+        .total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Fee Structure</h2>
+        <div id="feeList">
+            <div class="fee-item">
+                <span>Tuition Fee - $500</span>
+                <button onclick="addToCart('Tuition Fee', 500)">Add to Cart</button>
+            </div>
+            <div class="fee-item">
+                <span>Library Fee - $100</span>
+                <button onclick="addToCart('Library Fee', 100)">Add to Cart</button>
+            </div>
+            <div class="fee-item">
+                <span>Lab Fee - $150</span>
+                <button onclick="addToCart('Lab Fee', 150)">Add to Cart</button>
+            </div>
+        </div>
+
+        <h2>Cart</h2>
+        <div id="cart" class="cart"></div>
+        <h3 class="total">Total: $<span id="total">0</span></h3>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(name, price) {
+            cart.push({ name, price });
+            total += price;
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartDiv = document.getElementById('cart');
+            cartDiv.innerHTML = '';
+            cart.forEach((item, index) => {
+                cartDiv.innerHTML += `<div class='cart-item'>${item.name} - $${item.price} <button class='remove-btn' onclick='removeFromCart(${index})'>Remove</button></div>`;
+            });
+            document.getElementById('total').textContent = total;
+        }
+
+        function removeFromCart(index) {
+            total -= cart[index].price;
+            cart.splice(index, 1);
+            updateCart();
+        }
+    </script>
+</body>
+</html>

@@ -1,109 +1,473 @@
-*{
+/* NAVBAR STYLING */
+#navbar {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 65px; 
+  border-bottom: 2px solid #ddd;
+}
+
+/* LOGO */
+.navbar-brand img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* NAVBAR MENU */
+.navbar-nav {
+  display: flex;
+  gap: 20px; 
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  padding: 5px 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #0182d6;
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #005a9e;
+}
+
+/* NAVBAR RIGHT SIDE - BUTTON & CALL */
+.navbar-extra {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* APPOINTMENT BUTTON */
+.btn-appointment {
+  background-color: #00bcd4;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s ease;
+}
+
+.btn-appointment:hover {
+  background-color: #0097a7;
+}
+
+/* CALL US LINK */
+.call-link {
+  color: #0182d6;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.call-link i {
+  font-size: 18px;
+}
+/* CAROUSEL IMAGE HEIGHT */
+.carousel img {
+  height: 500px;
+  object-fit: cover; 
+  width: 100%; 
+}
+/* RESPONSIVE DESIGN */
+.carousel img {
+  height: 500px; 
+  width: 100%; 
+}
+
+/* Responsive Carousel */
+@media (max-width: 992px) {
+  .carousel img {
+      height: 350px; 
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel img {
+      height: 280px;
+}
+
+@media (max-width: 576px) {
+  .carousel img {
+      height: 200px; 
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    width: 100%;
+    padding: 10px 15px;
+    display: block;
+    border-bottom: 1px solid #eee;
+  }
+
+  .navbar-extra {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .btn-appointment {
+    width: 100%;
+    text-align: center;
+  }
+
+  .call-link {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+
+/* primary care card section */
+.card-feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 250px;
+}
+
+@media (max-width: 768px) {
+  .row {
+      flex-direction: column;
+      align-items: center;
+  }
+  .col-sm-12 {
+      width: 90%;
+  }
+  .card-feature {
+      height: 150px;
+  }
+}
+}
+/* about area content  */
+.clinic-section {
+  background-color: #f0faff;
+  padding: 40px 20px;
+}
+.clinic-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.clinic-content h2 span {
+  color: blue;
+}
+.clinic-content p {
+  font-size: 16px;
+}
+.clinic-list {
+  list-style: none;
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
-#future{
-height: 250px;
-width:100%;
-background-color:#ECFBFE;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.clinic-list li {
+  font-size: 16px;
+  color: #2a4d85;
+  margin-bottom: 5px;
 }
-#navbarColor03:hover{
-color: #00bcd4;
-border-bottom: 2px solid #2a00d4;
-}
-#appoinment:hover{
-color:blueviolet;
-background-color:  #00bcd4;
-transition:0.3s ;
-border-radius: 12px;
-} 
-.about-area{
-background-color:#f0f9fa;
-background-image: url(./images/about.png.webp);  
-background-repeat: no-repeat;
-background-size:500px;
-}
-.link_one:hover{
-border-bottom:2px solid #346bae;
-}
-.headline-area{
-height: 250px;
-width: 100%;
-color: #fff;
-background-image: url(./images/bg1.jpg);
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;
-position: relative;
-opacity:0.5;
-}
-.headline-area:hover{
-opacity: 1.0;
-}
-
-/*button styling*/
-#button-style {
-position: relative;
-background-color:darkblue;
-border: none;
-font-size: 28px;
-color: #FFFFFF;
-text-align: center;
--webkit-transition-duration: 0.4s; /* Safari */
-transition-duration: 0.4s;
-text-decoration: none;
-overflow: hidden;
-cursor: pointer;
-}
-
-#button-style:after {
-content: "";
-background:orange;
-display: block;
-position: absolute;
-padding-top: 300px;
-padding-left: 350px;
-margin-left: -20px!important;
-margin-top: -120%;
-opacity: 0;
-transition: all 0.9s
-}
-
-#button-style:active:after {
-padding: 0;
-margin: 0;
-opacity: 1;
-transition: 0s
-}
-/*doctors image hover*/
-#image-scroll:hover{
-transform: scale(1.05);
-}
-/* doctor card sec  */
-#cardtheme{
-  text-align: center;
-  width: 255px;
-  padding: 5px;
-  border: 1px solid black;
- background-color: azure;
-  background-color: white;
+.btn-read-more {
+  background-color: navy;
+  color: white;
+  padding: 10px 20px;
   border-radius: 5px;
-  margin-right: 5px;
-  margin-left: 5px;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .clinic-section {
+      text-align: center;
+      padding: 20px 10px;
+  }
+  .clinic-image img {
+      max-width: 80%;
+      height: auto;
+      margin-bottom: 20px;
+  }
+  .clinic-content h2 {
+      font-size: 24px;
+  }
+  .clinic-content p {
+      font-size: 14px;
+  }
+  .clinic-list li {
+      font-size: 14px;
+  }
+  .btn-read-more {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .clinic-content h2 {
+      font-size: 22px;
+  }
+  .clinic-content p {
+      font-size: 13px;
+  }
+  .clinic-list li {
+      font-size: 13px;
+  }
+  .btn-read-more {
+      padding: 6px 12px;
+      font-size: 12px;
+  }
+}
+/* accordion section */
+@media (max-width: 576px) {
+  h2 {
+    font-size: 1.5rem;
+  }
 
+  .accordion-button {
+    font-size: 1rem;
+  }
+
+  .accordion-body {
+    font-size: 0.95rem;
+  }
 }
-/*footer icon*/
-.footer-icon:hover{
-border:2px solid #3d7dcc;
-border-radius: 50x;
-background-color:#3d7dcc;
+/* future section  */
+#cardtheme {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
 }
-.about-accordion{
-width:500px;
-position:absolute;
-top:1230px;
-right:500px;
-bottom: 160px;
+
+#cardtheme:hover {
+  transform: translateY(-5px);
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .area-heading {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .area-heading > div {
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .card-team {
+    margin-bottom: 20px;
+  }
+
+  .card-team__body h3 a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h3 {
+    font-size: 24px;
+  }
+
+  .card-team__body p {
+    font-size: 14px;
+  }
+}
+/* emergency hotline section  */
+/* Background image and overlay */
+.hotline-bg {
+  background: url('./images/bg1.jpg') no-repeat center center/cover;
+  padding: 50px 0;
+  min-height: 300px;
+  position: relative;
+  color: white;
+}
+
+/* Text Styling */
+.hotline-title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.hotline-number {
+  font-size: 22px;
+  display: block;
+  margin-top: 10px;
+}
+
+.hotline-description {
+  font-size: 18px;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hotline-title {
+    font-size: 32px;
+  }
+
+  .hotline-number {
+    font-size: 18px;
+  }
+
+  .hotline-description {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .hotline-bg {
+    padding: 30px 0;
+    min-height: 300px;
+  }
+}
+/* MRI SCAN IMAGE SECTION  */
+@media (max-width: 768px) {
+  .our_ability_img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .our_ability_member_text h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .our_ability_member_text p {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  #button-style {
+    display: block;
+    width: 80%; /* Makes it responsive */
+    font-size: 0.9rem; /* Slightly larger for readability */
+    padding: 10px 15px;
+    margin: 15px auto; /* Centered with spacing */
+    background-color: #000066;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .read-more-btn {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .d-lg-flex.mt-5 {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+/* MAKE AN APPOINMENT SECTION  */
+@media (max-width: 768px) {
+  #make-an-appointment h2 {
+    font-size: 1.5rem;
+    padding: 0 15px;
+  }
+
+  #make-an-appointment p {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
+  #make-an-appointment .btn {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+/* FORM SECTION  */
+@media (max-width: 768px) {
+  .wrap-appointment {
+    flex-direction: column;
+  }
+  .wrap-appointment .col-md-8,
+  .wrap-appointment .col-md-4 {
+    width: 100%;
+    padding: 20px;
+  }
+  .wrap-appointment h2 {
+    font-size: 24px;
+  }
+  .btn {
+    width: 100%;
+  }
+}
+/* FOOTER SECTION  */
+@media (max-width: 768px) {
+  #footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #footer .ftco-footer-widget {
+    margin-bottom: 2rem;
+  }
+
+  #footer ul {
+    padding-left: 0;
+  }
+
+  #footer ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  #footer .ftco-footer-social {
+    justify-content: center;
+  }
+
+  #footer .bi {
+    font-size: 1.2rem;
+  }
+
+  #footer h2.ftco-heading-2 {
+    font-size: 1.5rem;
+  }
+
+  #footer p,
+  #footer ul li {
+    font-size: 1rem;
+  }
+
+  #footer .text-center {
+    font-size: 0.9rem;
+  }
 }
